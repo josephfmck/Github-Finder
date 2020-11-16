@@ -1,6 +1,7 @@
 //  Init/instantiate Github class
 const github = new Github();
-
+//  Init/instantiate ui
+const ui = new UI();
 
 //  Search Input
 const $searchUser = document.querySelector('#search-user');
@@ -11,10 +12,9 @@ $searchUser.addEventListener('keyup', (e) => {
     const userText = e.target.value;
 
     if(userText !== '') {
-        console.log(userText);
 
         //  Make http call with github class
-        //gives back profile if success, gives back message 'Not Found' if no profile exists
+        //gives back profile object of data if success, gives back message 'Not Found' if no profile exists
         github.getUser(userText)
             .then(data => {
                 //check if profile exists
@@ -23,7 +23,7 @@ $searchUser.addEventListener('keyup', (e) => {
                     console.log('Profile not found')
                 } else {
                     //  Show Profile with UI class
-                    console.log(data);
+                    ui.showProfile(data.profile);
                 }
             });
     } else {
