@@ -2,7 +2,7 @@ class Github {
     constructor() {
         //github OAuth API Info
         this.client_id = 'c9a498f36a47b2eee938';
-        this.client_secret = 'd9e019cdfd94e8c5b6092aa0a6e6be2716f6b3ca';
+        this.client_secret = 'c12231d7a325860dffa56d122137f728aa8a3fad';
     }
 
     async getUser(user) {
