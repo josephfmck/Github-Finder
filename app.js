@@ -22,8 +22,9 @@ $searchUser.addEventListener('keyup', (e) => {
                     //  Show Alert with UI class
                     ui.showAlert('User not found', 'alert alert-danger')
                 } else {
-                    //  Show Profile with UI class
+                    //  Show Profile and repos with UI class
                     ui.showProfile(data.profile);
+                    ui.showRepos(data.repos);
                 }
             });
     } else {
